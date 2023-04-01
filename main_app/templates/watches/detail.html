@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Watch Details</h1>
+
+
+<section class="row">
+    <div class="responsive-img col s6">
+        <img src="{{ watch.img }}" alt="">
+    </div>
+
+
+    <div class="card col s6">
+        <div class="card-content">
+            <span class="card-title">{{ watch.brand }}</span>
+        </div>
+        <p>Name: {{ watch.name }}</p>
+        <p>manufactured: {{ watch.manufactured }} </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+{% endblock %}

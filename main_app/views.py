@@ -1,14 +1,6 @@
 from django.shortcuts import render
+from .models import Watch
 
-watches = [
-    {'brand': 'Rolex', 'name': 'Submariner', 'manufactured': 2005,
-        'img': 'https://imageio.forbes.com/b-i-forbesimg/arieladams/files/2013/09/Rolex-SUBMARINER-NoDATE-047.jpg?format=jpg&width=400'},
-    {'brand': 'Casio', 'name': 'Vintage', 'manufactured': 2012,
-        'img': 'https://www.mastersintime.com/pictures/casio-classic-edgy-a700wem-7aef-10482584.jpg'},
-    {'brand': 'G-Shock', 'name': 'CasiOak', 'manufactured': 2008,
-        'img': 'https://wornandwound.com/library/uploads/2022/08/GM-B2100D-1A_front-scaled.jpg'}
-
-]
 
 # Create your views here.
 
@@ -22,6 +14,11 @@ def contact(request):
 
 
 def watches_index(request):
+    watches = Watch.objects.all()
     return render(request, 'watches/index.html', {
         'watches': watches
     })
+
+def watches_detail(request, watch_id):
+    watch = Watch.objects.get(id=watch_id)
+    return render(request, 'watches/detail.html', {'watch': watch})
