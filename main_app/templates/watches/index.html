@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="center">Watches</h1>
+<section class="row">
+    {% for watches in watches %}
+    <div class="col s4">
+        <div class="card large">
+            <div class="card-image ">
+                <img src="{{watches.img}}" >
+            </div>
+            <div class="card-content">
+                
+                <span class="card-title black-text">{{watches.brand}}</span>
+                <p>{{watches.name}}</p>
+                <p>{{watches.manufactured}}</p>
+
+            </div>
+            <div class="card-action">
+                <a href="#">Available</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+
+{% endblock %}
