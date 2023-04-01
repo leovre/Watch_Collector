@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 watches = [
-    {'brand': 'Rolex', 'name': 'submariner', 'manufactured': 2005,
+    {'brand': 'Rolex', 'name': 'Submariner', 'manufactured': 2005,
         'img': 'https://imageio.forbes.com/b-i-forbesimg/arieladams/files/2013/09/Rolex-SUBMARINER-NoDATE-047.jpg?format=jpg&width=400'},
     {'brand': 'Casio', 'name': 'Vintage', 'manufactured': 2012,
         'img': 'https://www.mastersintime.com/pictures/casio-classic-edgy-a700wem-7aef-10482584.jpg'},
