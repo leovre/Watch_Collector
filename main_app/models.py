@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from datetime import date
 
 CLEAN = (
     ('W', 'Wipe'),
@@ -19,6 +20,9 @@ class Watch(models.Model):
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'watch_id': self.id})
+    
+    def cleaned_for_today(self):
+        return len(self.cleaning_set.filter(date=date.today()))
 
 
 class Cleaning(models.Model):
@@ -33,3 +37,6 @@ class Cleaning(models.Model):
 
     def __str__(self):
         return f'{self.get_polish_display()} on {self.date}'
+    
+    class Meta:
+        ordering = ['-date']
