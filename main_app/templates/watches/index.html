@@ -2,22 +2,22 @@
 
 {% block content %}
 <h1 class="center">Watches</h1>
-<section class="row">
+<section class="row container">
     {% for watches in watches %}
     <div class="col s4">
         <div class="card large">
             <div class="card-image ">
-                <img src="{{watches.img}}" >
+                <img src="{{watches.img}}">
             </div>
             <div class="card-content">
-                
+
                 <span class="card-title black-text">{{watches.brand}}</span>
                 <p>{{watches.name}}</p>
                 <p>{{watches.manufactured}}</p>
 
             </div>
             <div class="card-action">
-                <a href="/watches/{{ watches.id }}">Available</a>
+                <a href="{% url 'detail' watches.id%}">Available</a>
             </div>
         </div>
     </div>

@@ -2,41 +2,43 @@
 
 {% block content %}
 <h1 class="center">Home</h1>
-<section class="row">
-    <p class="col s9 ">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Beatae vitae cumque tempore sed, perspiciatis tempora deserunt autem maxime,
-        odio ipsam tenetur, possimus exercitationem modi hic nostrum ea iusto? Id,
-        quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-        suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
-        expedita debitis. Esse ut quae culpa, nulla aperiam alias non provident.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Beatae vitae cumque tempore sed, perspiciatis tempora deserunt autem maxime,
-        odio ipsam tenetur, possimus exercitationem modi hic nostrum ea iusto? Id,
-        quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-        suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
-        expedita debitis. Esse ut quae culpa,
-        nulla aperiam alias non provident.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Beatae vitae cumque tempore sed, perspiciatis tempora deserunt autem maxime,
-        odio ipsam tenetur, possimus exercitationem modi hic nostrum ea iusto? Id,
-        quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-        suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
-        expedita debitis. Esse ut quae culpa, nulla aperiam alias non provident.
-        quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-        suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
-        expedita debitis. Esse ut quae culpa, nulla aperiam alias non provident.
-    </p>
-    <img class="col s3" src="https://imageio.forbes.com/b-i-forbesimg/arieladams/files/2013/09/Rolex-SUBMARINER-NoDATE-047.jpg?format=jpg&width=400" alt="">
+<div class="container">
+    <section class="row">
+        <p class="col s9 ">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Beatae vitae cumque tempore sed, perspiciatis tempora deserunt autem maxime,
+            odio ipsam tenetur, possimus exercitationem modi hic nostrum ea iusto? Id,
+            quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
+            expedita debitis. Esse ut quae culpa, nulla aperiam alias non provident.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Beatae vitae cumque tempore sed, perspiciatis tempora deserunt autem maxime,
+            odio ipsam tenetur, possimus exercitationem modi hic nostrum ea iusto? Id,
+            quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
+            expedita debitis. Esse ut quae culpa,
+            nulla aperiam alias non provident.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Beatae vitae cumque tempore sed, perspiciatis tempora deserunt autem maxime,
+            odio ipsam tenetur, possimus exercitationem modi hic nostrum ea iusto? Id,
+            quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
+            expedita debitis. Esse ut quae culpa, nulla aperiam alias non provident.
+            quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            suscipit aperiam pariatur ut voluptatibus recusandae assumenda odit, cum at,
+            expedita debitis. Esse ut quae culpa, nulla aperiam alias non provident.
+        </p>
+        <img class="col s3" src="https://imageio.forbes.com/b-i-forbesimg/arieladams/files/2013/09/Rolex-SUBMARINER-NoDATE-047.jpg?format=jpg&width=400" alt="">
 
-</section>
-<br>
-<br>
-<section class="container center">
-    <div class="row">
-        <button class="col s5 btn grey darken-3"><a class="white-text" href="/watches">View Available Watches</a></button>
-        <div class="col s2"></div>
-        <button class="col s5 btn grey darken-3"><a class="white-text" href="/bands">View Available Bands</a></button>
-    </div>
-</section>
+    </section>
+    <br>
+    <br>
+    <section class="container center">
+        <div class="row">
+            <button class="col s5 btn grey darken-3"><a class="white-text" href="{% url 'index' %}">View Available Watches</a></button>
+            <div class="col s2"></div>
+            <button class="col s5 btn grey darken-3"><a class="white-text" href="{% url 'bands' %}">View Available Bands</a></button>
+        </div>
+    </section>
+</div>
 {% endblock %}

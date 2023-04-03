@@ -20,12 +20,13 @@
                     <li><a href="/" class="left brand-logo material-icons md-48">watch</a></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'watch_create' %}">Add Watch</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main class="container">
+    <main>
         {% block content %}
         {% endblock %}
     </main>
