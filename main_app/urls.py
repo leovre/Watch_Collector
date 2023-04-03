@@ -10,6 +10,7 @@ urlpatterns = [
     path('watches/create/', views.WatchCreate.as_view(), name='watch_create'),
     path('watches/<int:pk>/update/', views.WatchUpdate.as_view(), name='watch_update'),
     path('watches/<int:pk>/delete/', views.WatchDelete.as_view(), name='watch_delete'),
+    path('watches/<int:watch_id>/add_cleaning/', views.add_cleaning, name='add_cleaning'),
     path('bands/', views.bands, name='bands'),
     
 ]
