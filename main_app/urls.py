@@ -8,6 +8,8 @@ urlpatterns = [
     path('watches/', views.watches_index, name='index'),
     path('watches/<int:watch_id>/', views.watches_detail, name='detail'),
     path('watches/create/', views.WatchCreate.as_view(), name='watch_create'),
+    path('watches/<int:pk>/update/', views.WatchUpdate.as_view(), name='watch_update'),
+    path('watches/<int:pk>/delete/', views.WatchDelete.as_view(), name='watch_delete'),
     path('bands/', views.bands, name='bands'),
     
 ]

@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% if object %}
+<h1 class="center">Edit <span class="blue-text">{{object.brand}}</span></h1>
+{% else %}
 <h1 class="center">Add Watch</h1>
+{% endif %}
 <section class="container">
     <form action="" method="POST">
         {% csrf_token %}

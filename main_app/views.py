@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Watch
 
 
@@ -34,3 +34,12 @@ class WatchCreate(CreateView):
     model = Watch
     fields = "__all__"
     success_url = '/watches'
+
+class WatchUpdate(UpdateView):
+    model = Watch
+    fields = "__all__"
+
+class WatchDelete(DeleteView):
+    model = Watch
+    success_url = '/watches'
+    

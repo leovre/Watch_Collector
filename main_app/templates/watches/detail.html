@@ -5,19 +5,24 @@
 
 
 <section class="row container">
-    <div class="responsive-img col s6">
-        <img src="{{ watch.img }}" alt="watch" width="475em" height="600em">
+    <div class=" col s6">
+        <img src="{{ watch.img }}" alt="watch"  class="responsive-img">
     </div>
 
 
     <div class="card col s6">
-        <div class="card-content">
+        <div class="card-content center">
             <span class="card-title">{{ watch.brand }}</span>
+            <p class="">Name: {{ watch.name }}</p>
+            <p>manufactured: {{ watch.manufactured }} </p>
         </div>
-        <p>Name: {{ watch.name }}</p>
-        <p>manufactured: {{ watch.manufactured }} </p>
-
+            
+        <div class="card-action center">
+            <a href="{% url 'watch_delete' watch.id %}" class="black-text">Delete Watch</a>
+            <a href="{% url 'watch_update' watch.id %}" class="black-text">Update Watch</a>
+        </div>
     </div>
+    
 
 </section>
 

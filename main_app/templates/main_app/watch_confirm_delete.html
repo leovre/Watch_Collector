@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="center">Delete <span class="blue-text">{{object.brand}}</span>? </h1>
+
+<form action="" method="POST" class="center">
+    {% csrf_token %}
+    <input type="submit"  value="Yes" class="btn grey darken-3 white-text">
+    <a href="{% url 'detail' watch.id %}" class="btn grey darken-3 white-text">Cancel</a>
+</form>
+
+{% endblock %}
